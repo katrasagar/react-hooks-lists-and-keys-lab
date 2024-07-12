@@ -1,19 +1,19 @@
-import React from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
-import About from "./About";
-import ProjectList from "./ProjectList";
-import user from "../data/user";
+import React from 'react';
+import NavBar from './NavBar';
+import Home from './Home';
+import About from './About';
+import ProjectList from './ProjectList';
+import projectData from './data/projects'; // Assuming you have a file with project data
 
-function App() {
+const App = () => {
   return (
     <div>
       <NavBar />
-      <Home username={user.name} city={user.city} color={user.color} />
-      <About bio={user.bio} links={user.links} />
-      <ProjectList projects={user.projects} />
+      <Home />
+      <About />
+      <ProjectList projects={projectData} />
     </div>
   );
-}
+};
 
 export default App;
